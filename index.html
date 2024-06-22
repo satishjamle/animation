@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: myanimate 10s linear;
+            /* animation-iteration-count: infinite; */
+            /* animation-fill-mode: forwards; */
+            /* animation-direction: alternate; */
+    
+        }
+        /* Animation rules */
+        @keyframes myanimate {
+            0%{
+                margin-left: 0;
+                margin-top: 0;
+                background-color: black;
+            }
+            25%{
+                margin-left: 500px;
+                margin-top: 0;
+                background-color: rgb(243, 10, 127);
+            }
+            50%{
+                margin-left: 500px;
+                margin-top: 500px;
+                background-color: chartreuse;
+            }
+            75%{
+                margin-left: 0px;
+                margin-top: 500px;
+                background-color: darkorange;
+            }   
+            100%{
+                margin-left: 0px;
+                margin-top: 0px;
+                background-color: darkred;
+            }
+        }
+        .box:hover{
+            animation-play-state: paused;
+        }
+        body{
+            background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSicIVFY-X49tWkcNk1BGIgHKiI9_1nPCFbDg&s);
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
